@@ -2,13 +2,13 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "adminUsername": {
+    "Username": {
       "type": "string",
       "metadata": {
         "description": "Username for the Virtual Machine."
       }
     },
-    "adminPassword": {
+    "Password": {
       "type": "securestring",
       "metadata": {
         "description": "Password for the Virtual Machine."
@@ -133,8 +133,8 @@
         },
         "osProfile": {
           "computerName": "[variables('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "Username": "[parameters('Username')]",
+          "Password": "[parameters('Password')]"
         },
         "storageProfile": {
           "imageReference": {
