@@ -22,7 +22,7 @@
     },
     "windowsOSVersion": {
       "type": "string",
-      "defaultValue": "2016-Datacenter",
+      "defaultValue": "2012-R2-Datacenter",
       "allowedValues": [
         "2008-R2-SP1",
         "2012-Datacenter",
@@ -37,14 +37,14 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "nicName": "myVMNic",
-    "addressPrefix": "10.0.0.0/16",
-    "subnetName": "Subnet",
-    "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "myPublicIP",
-    "vmName": "SimpleWindowsVM",
-    "virtualNetworkName": "MyVNET",
+    "storageAccountName": "ravistor",
+    "nicName": "ravinic",
+    "addressPrefix": "10.0.0.0/28",
+    "subnetName": "ravinetsub",
+    "subnetPrefix": "10.0.0.0/28",
+    "publicIPAddressName": "raviPIP",
+    "vmName": "ravinode",
+    "virtualNetworkName": "ravinet",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
   "resources": [
